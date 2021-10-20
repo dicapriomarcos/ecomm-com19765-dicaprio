@@ -1,0 +1,11 @@
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 80px;
+}

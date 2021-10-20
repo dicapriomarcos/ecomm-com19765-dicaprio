@@ -1,0 +1,48 @@
+#menu {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+}
+#menu-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#menu li {
+    padding: 5px;
+    margin: 0 2.5px;
+    font-weight: 700;
+}
+
+
+
+@media( min-width: 768px){
+
+    #menu {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+    }
+
+    #menuToggle {
+        display: none;
+    }
+
+}
+
+@media(max-width: 767px){
+
+    #menu.open {
+        display: block;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background-color: black;
+    }
+
+    #menu li a{
+        color: white;
+    }
+
+}

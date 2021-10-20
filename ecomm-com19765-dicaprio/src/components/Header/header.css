@@ -1,0 +1,11 @@
+header {
+    
+    display: block;
+    width: 100%;
+    width: 100vw;
+    background-color: whitesmoke;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5vw;
+}
