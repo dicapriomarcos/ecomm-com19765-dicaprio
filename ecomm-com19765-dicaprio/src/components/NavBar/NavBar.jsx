@@ -1,5 +1,5 @@
 import React from 'react';
-import menu from '../../assets/menu.png';
+import menu from './menu.png';
 import './NavBar.css'
 
 function NavBar() {
@@ -12,13 +12,13 @@ function NavBar() {
     <div id="menu-wrapper">
           <ul id="menu">
               <li>
-               <a href="#">Categoría 1</a> 
+               <a href="https://amomimovil.marcosdicaprio.dev">Categoría 1</a> 
               </li>
               <li>
-              <a href="#">Categoría 2</a> 
+              <a href="https://amomimovil.marcosdicaprio.dev">Categoría 2</a> 
               </li>
               <li>
-              <a href="#">Categoría 3</a> 
+              <a href="https://amomimovil.marcosdicaprio.dev">Categoría 3</a> 
               </li>
           </ul>
           <div id="menuToggle" onClick={menuToggle}>
