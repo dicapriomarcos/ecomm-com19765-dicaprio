@@ -9,7 +9,7 @@ export default function AddToCart({quantity}) {
       
     }
   return (
-    <div class="add-to-cart-button">
+    <div className="add-to-cart-button">
         <button onClick={onAdd}>Agregar al carrito</button>
     </div>
   );

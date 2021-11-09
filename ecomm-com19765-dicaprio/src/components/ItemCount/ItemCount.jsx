@@ -18,8 +18,8 @@ export default function ItemCount({initial, stock}) {
     }
 
   return (
-    <div class="add-to-cart-container">
-        <div class="quantity-buttons">
+    <div className="add-to-cart-container">
+        <div className="quantity-buttons">
             <button onClick={removeQuantity}>
                 -
             </button>

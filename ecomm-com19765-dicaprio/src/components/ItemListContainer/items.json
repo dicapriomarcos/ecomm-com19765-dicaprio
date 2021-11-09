@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Móvil Samsung S21 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "999€",
+        "stock": "5",
+        "image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_84357424/fee_786_587_png"
+    },
+    {
+        "title": "Móvil Samsung S22 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "546€",
+        "stock": "10",
+        "image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_84357424/fee_786_587_png"
+    },
+    {
+        "title": "Móvil Samsung S23 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "789€",
+        "stock": "2",
+        "image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_84357424/fee_786_587_png"
+    },
+    {
+        "title": "Móvil Samsung S24 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "150€",
+        "stock": "1",
+        "image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_84357424/fee_786_587_png"
+    },
+    {
+        "title": "Móvil Samsung S25 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "1230€",
+        "stock": "15",
+        "image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_84357424/fee_786_587_png"
+    },
+    {
+        "title": "Móvil Samsung S21 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "99€",
+        "stock": "6",
+        "image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_84357424/fee_786_587_png"
+    }
+]
