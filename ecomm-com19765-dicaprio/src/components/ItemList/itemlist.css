@@ -1,0 +1,6 @@
+.item-list-row {
+
+    display: flex;
+    flex-wrap: wrap;
+
+}

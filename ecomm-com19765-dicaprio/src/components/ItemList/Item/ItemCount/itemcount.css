@@ -1,0 +1,16 @@
+.quantity-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.quantity-buttons button {
+    width: 20px;
+    height: 20px;
+    background-color: turquoise;
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+}
+
+.quantity-buttons span {
+    min-width: 30px;
+}

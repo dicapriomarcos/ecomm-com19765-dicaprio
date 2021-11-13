@@ -1,0 +1,9 @@
+#cart-widget {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#cart-widget img {
+    display: block;
+}

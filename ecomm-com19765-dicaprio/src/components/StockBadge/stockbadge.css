@@ -1,0 +1,14 @@
+.quantity-badge {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    padding: 5px 10px;
+}
+
+.badge-yellow {
+    background-color: #ffff2d;
+}
+
+.badge-red {
+    background-color: #f96363;
+} 

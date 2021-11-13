@@ -1,0 +1,17 @@
+button.addtocartbutton {
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button.buy-now {
+    background-color: #63db63;
+    color: white;
+    border: 0;
+}
+
+button.no-stock {
+    background-color: whitesmoke;
+    color: gray;
+    border: 0;
+}

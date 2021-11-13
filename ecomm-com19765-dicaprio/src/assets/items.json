@@ -1,0 +1,164 @@
+[
+    {
+        "id": "1",
+        "title": "Móvil Samsung S21 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "999",
+        "stock": "5",
+        "image": "https://i.ibb.co/8N2GCLz/samsung-a30s-black.jpg",
+        "marca": "Samsung"
+    },
+    {
+        "id": "2",
+        "title": "Móvil Samsung S22 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "546",
+        "stock": "10",
+        "image": "https://i.ibb.co/8N2GCLz/samsung-a30s-black.jpg",
+        "marca": "Samsung"
+    },
+    {
+        "id": "3",
+        "title": "Móvil Samsung S23 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "789",
+        "stock": "2",
+        "image": "https://i.ibb.co/d7gRMx7/xiaomi-note-10-pro-gray.jpg",
+        "marca": "Xiaomi"
+    },
+    {
+        "id": "4",
+        "title": "Móvil Samsung S24 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "150",
+        "stock": "1",
+        "image": "https://i.ibb.co/d7gRMx7/xiaomi-note-10-pro-gray.jpg",
+        "marca": "Xiaomi"
+    },
+    {
+        "id": "5",
+        "title": "Móvil Samsung S25 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "1230",
+        "stock": "0",
+        "image": "https://i.ibb.co/8N2GCLz/samsung-a30s-black.jpg",
+        "marca": "Samsung"
+    },
+    {
+        "id": "6",
+        "title": "Móvil Samsung S21 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "99",
+        "stock": "6",
+        "image": "https://i.ibb.co/d7gRMx7/xiaomi-note-10-pro-gray.jpg",
+        "marca": "Xiaomi"
+    },
+    {
+        "id": "7",
+        "title": "Móvil Samsung S21 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "999",
+        "stock": "5",
+        "image": "https://i.ibb.co/8N2GCLz/samsung-a30s-black.jpg",
+        "marca": "Samsung"
+    },
+    {
+        "id": "8",
+        "title": "Móvil Samsung S22 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "546",
+        "stock": "10",
+        "image": "https://i.ibb.co/d7gRMx7/xiaomi-note-10-pro-gray.jpg",
+        "marca": "Xiaomi"
+    },
+    {
+        "id": "9",
+        "title": "Móvil Samsung S23 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "789",
+        "stock": "2",
+        "image": "https://i.ibb.co/Kb0KsvB/apple-iphone-12-red.jpg",
+        "marca": "Apple"
+    },
+    {
+        "id": "10",
+        "title": "Móvil Samsung S24 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "150",
+        "stock": "1",
+        "image": "https://i.ibb.co/8N2GCLz/samsung-a30s-black.jpg",
+        "marca": "Samsung"
+    },
+    {
+        "id": "11",
+        "title": "Móvil Samsung S25 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "1230",
+        "stock": "0",
+        "image": "https://i.ibb.co/d7gRMx7/xiaomi-note-10-pro-gray.jpg",
+        "marca": "Xiaomi"
+    },
+    {
+        "id": "12",
+        "title": "Móvil Samsung S21 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "99",
+        "stock": "6",
+        "image": "https://i.ibb.co/d7gRMx7/xiaomi-note-10-pro-gray.jpg",
+        "marca": "Xiaomi"
+    },
+    {
+        "id": "13",
+        "title": "Móvil Samsung S21 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "999",
+        "stock": "5",
+        "image": "https://i.ibb.co/Kb0KsvB/apple-iphone-12-red.jpg",
+        "marca": "Apple"
+    },
+    {
+        "id": "14",
+        "title": "Móvil Samsung S22 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "546",
+        "stock": "10",
+        "image": "https://i.ibb.co/d7gRMx7/xiaomi-note-10-pro-gray.jpg",
+        "marca": "Xiaomi"
+    },
+    {
+        "id": "15",
+        "title": "Móvil Samsung S23 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "789",
+        "stock": "2",
+        "image": "https://i.ibb.co/Kb0KsvB/apple-iphone-12-red.jpg",
+        "marca": "Apple"
+    },
+    {
+        "id": "16",
+        "title": "Móvil Samsung S24 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "150",
+        "stock": "1",
+        "image": "https://i.ibb.co/8N2GCLz/samsung-a30s-black.jpg",
+        "marca": "Samsung"
+    },
+    {
+        "id": "17",
+        "title": "Móvil Samsung S25 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "1230",
+        "stock": "0",
+        "image": "https://i.ibb.co/d7gRMx7/xiaomi-note-10-pro-gray.jpg",
+        "marca": "Xiaomi"
+    },
+    {
+        "id": "18",
+        "title": "Móvil Samsung S21 Ultra 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas lacus porttitor tincidunt pharetra. Nunc id metus tempor, rutrum enim a, pretium nisl. Aliquam ac semper ligula.",
+        "price": "99",
+        "stock": "6",
+        "image": "https://i.ibb.co/Kb0KsvB/apple-iphone-12-red.jpg",
+        "marca": "Apple"
+    }
+]

@@ -1,16 +1,19 @@
 import './App.css';
 //import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from './components/Header/Header';
-//gitimport ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Header from './layout/Header/Header';
+import Main from './layout/Main/Main';
+import Footer from './layout/Footer/Footer';
+import { BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
+<BrowserRouter>
     <div className="App">
-        <Header />
-     {/*<ItemListContainer greeting="Listado de productos" /> */} 
-      <ItemDetailContainer />
+      <Header />
+      <Main />
+      <Footer />
     </div>
+</BrowserRouter>
   );
 }
 
