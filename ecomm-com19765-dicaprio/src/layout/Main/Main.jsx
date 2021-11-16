@@ -3,6 +3,7 @@ import './main.css'
 import ItemDetailContainer from '../../containers/ItemDetailContainer/ItemDetailContainer'
 import ItemListContainer from '../../containers/ItemListContainer/ItemListContainer'
 import { Switch, Route } from "react-router-dom";
+import Carrito from '../../pages/Carrito/Carrito';
 
 
 export default function Main() {
@@ -17,6 +18,9 @@ export default function Main() {
                 </Route>
                 <Route exact path="/producto/:productId">
                 <ItemDetailContainer />
+                </Route>
+                <Route exact path="/carrito">
+                <Carrito />
                 </Route>
             </Switch>
         </main>
