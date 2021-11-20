@@ -1,6 +1,8 @@
 import React , {useState} from 'react'
 import './itemdetail.css'
 import ItemCount from './ItemCount/ItemCount'
+import AddToCart from './AddToCart/AddToCart'
+import GoToCart from './GoToCart/GoToCart'
 
 
 
@@ -19,6 +21,7 @@ export default function ItemDetail({item}) {
     }
 
     return (
+
         <article className="single-product">
             <div className="image">
                 <img src={item.image} alt="" />
@@ -28,8 +31,9 @@ export default function ItemDetail({item}) {
             <h3>{item.price}</h3>
             <p>{item.description}</p>
             </div>
-            <ItemCount onAdd={onAdd} add={add} initial={0} stock={item.stock}/>
-
+            
+            <ItemCount initial={0} stock={item.stock} />
+            { add ? <GoToCart onAdd={onAdd} /> :  <AddToCart onAdd={onAdd} />}
         </article>
     )
 }
