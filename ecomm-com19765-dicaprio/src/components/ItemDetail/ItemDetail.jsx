@@ -3,6 +3,7 @@ import './itemdetail.css'
 import ItemCount from './ItemCount/ItemCount'
 import AddToCart from './AddToCart/AddToCart'
 import GoToCart from './GoToCart/GoToCart'
+import { useCartContext } from '../../context/CartContext'
 
 
 
@@ -10,15 +11,41 @@ import GoToCart from './GoToCart/GoToCart'
 export default function ItemDetail({item}) {
 
     const [add, setAdd] = useState(false)
-    
-    
-    
-    const onAdd = () => {
 
-    setAdd(true)
-    
+    const { cart, setCart } = useCartContext()
+
+    const addItem = ( quantity) => {
+
+        const index = cart.findIndex(i => i.id === item.id)
+
+        if (index > -1 ) {
+            const OldQuantity = cart[index].cantidad
+
+            cart.splice(index, 1)
+            setCart([...cart, {...item, cantidad: quantity + OldQuantity}])  
+        }else{
+            setCart([...cart, {...item, cantidad: quantity}])    
+        }
+        
+        setAdd(true)
 
     }
+
+    
+    const [quantity, setQuantity] = useState(0)
+
+    const addQuantity = () => {
+
+        quantity < item.stock ? setQuantity(quantity + 1) : alert('Ya no hay stock')
+        
+    }
+
+    const removeQuantity = () => {
+
+        quantity > 0 ? setQuantity(quantity - 1) : alert('No puedes bajar de aquí')
+
+    }
+
 
     return (
 
@@ -27,13 +54,13 @@ export default function ItemDetail({item}) {
                 <img src={item.image} alt="" />
             </div>
             <div className="data">
-            <h1>{item.title}</h1>
-            <h3>{item.price}</h3>
-            <p>{item.description}</p>
+                <h1>{item.title}</h1>
+                <h3>{item.price}</h3>
+                <p>{item.description}</p>
             </div>
             
-            <ItemCount initial={0} stock={item.stock} />
-            { add ? <GoToCart onAdd={onAdd} /> :  <AddToCart onAdd={onAdd} />}
+            <ItemCount initial={0} stock={item.stock} addQuantity={addQuantity} removeQuantity={removeQuantity} quantity={quantity}/>
+            { add ? <GoToCart /> :  <AddToCart item={item} addItem={addItem} quantity={quantity}/>}
         </article>
     )
 }
