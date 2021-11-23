@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import './ItemListContainer.css'
 import ItemList from '../../components/ItemList/ItemList';
 import products from '../../assets/items.json'
+import Loading from '../../components/Loading/Loading'
 
 const getFetch = new Promise((res, rej) => {
 
@@ -26,7 +27,6 @@ export default function ItemListContainer(props) {
   
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
-
 
  useEffect( () => {
 
@@ -55,7 +55,10 @@ export default function ItemListContainer(props) {
   return (
     <main id="item-list-container">
     <h2>{props.greeting} { slug ? slug.charAt(0).toUpperCase() + slug.slice(1) : ''}</h2>
-    { loading ? 'Cargando productos...' : <ItemList items={items} />}
+    <section>
+      { loading ? <Loading /> : <ItemList items={items} />}
+    </section>
+    
     </main>
   );
 }

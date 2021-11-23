@@ -7,3 +7,20 @@
 #cart-widget img {
     display: block;
 }
+
+#cart-widget .cart-wrapper {
+    position: relative;
+}
+
+#cart-widget .cart-count {
+    background-color: plum;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

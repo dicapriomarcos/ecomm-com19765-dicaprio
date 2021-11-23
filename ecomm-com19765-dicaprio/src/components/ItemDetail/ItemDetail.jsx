@@ -22,9 +22,9 @@ export default function ItemDetail({item}) {
             const OldQuantity = cart[index].cantidad
 
             cart.splice(index, 1)
-            setCart([...cart, {...item, cantidad: quantity + OldQuantity}])  
+            setCart([...cart, {...item, cantidad: quantity + OldQuantity, subtotal: quantity * item.price}])  
         }else{
-            setCart([...cart, {...item, cantidad: quantity}])    
+            setCart([...cart, {...item, cantidad: quantity, subtotal: quantity * item.price}])    
         }
         
         setAdd(true)
@@ -32,7 +32,7 @@ export default function ItemDetail({item}) {
     }
 
     
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(1)
 
     const addQuantity = () => {
 
@@ -58,9 +58,9 @@ export default function ItemDetail({item}) {
                 <h3>{item.price}</h3>
                 <p>{item.description}</p>
             </div>
-            
-            <ItemCount initial={0} stock={item.stock} addQuantity={addQuantity} removeQuantity={removeQuantity} quantity={quantity}/>
-            { add ? <GoToCart /> :  <AddToCart item={item} addItem={addItem} quantity={quantity}/>}
+            { add ? <GoToCart /> : <>
+            <ItemCount initial={1} stock={item.stock} addQuantity={addQuantity} removeQuantity={removeQuantity} quantity={quantity}/>
+            <AddToCart item={item} addItem={addItem} quantity={quantity}/> </>}
         </article>
     )
 }

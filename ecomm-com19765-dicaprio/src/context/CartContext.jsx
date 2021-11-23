@@ -9,7 +9,7 @@ export const CartContextProvider = ( {children} ) => {
     const [cart, setCart] = useState([])
 
     const removeItem = (id) => {
-        setCart(cart.filter((i)=> i.id != id))
+        setCart(cart.filter((i)=> i.id !== id))
     }
 
     const deleteCart = () => {

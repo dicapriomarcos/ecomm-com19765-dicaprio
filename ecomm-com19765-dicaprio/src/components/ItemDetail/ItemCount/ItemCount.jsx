@@ -1,7 +1,7 @@
 import React from 'react';
 import './itemcount.css'
 
-export default function ItemCount({ removeQuantity, addQuantity, quantity}) {
+export default function ItemCount({ removeQuantity, addQuantity, quantity = 1}) {
 
 
   return (
