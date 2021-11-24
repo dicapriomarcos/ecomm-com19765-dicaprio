@@ -4,6 +4,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import './itemdetailcontainer.css'
 import { useParams } from "react-router-dom"
 import Loading from '../../components/Loading/Loading'
+import { getFirestore } from '../../services/getFirestore';
 
 
 const getFetch = new Promise((res, rej) => {
@@ -30,11 +31,11 @@ export default function ItemDetailContainer() {
     const [loading, setLoading] = useState(true)
     
     useEffect( () => {
-      setLoading(true)
-      getFetch.then(res => {
-      setItem( items.find( item => item.id === productId ) )
-      setLoading(false)
-      })
+    
+    const dbQuery = getFirestore() // conexion con bbdd
+
+    dbQuery.collection('items').doc(productId).get()
+    .then(res => setItem( { id: res.id ,...res.data() } ) ).catch( err => console.log(err) ).finally( () => setLoading(false) )
     },[item, productId])
 
     return (

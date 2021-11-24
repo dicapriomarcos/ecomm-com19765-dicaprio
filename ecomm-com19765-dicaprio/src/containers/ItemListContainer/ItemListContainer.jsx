@@ -4,6 +4,8 @@ import './ItemListContainer.css'
 import ItemList from '../../components/ItemList/ItemList';
 import products from '../../assets/items.json'
 import Loading from '../../components/Loading/Loading'
+import { getFirestore } from '../../services/getFirestore';
+
 
 const getFetch = new Promise((res, rej) => {
 
@@ -30,26 +32,20 @@ export default function ItemListContainer(props) {
 
  useEffect( () => {
 
-    setLoading(true)
+    const query = getFirestore() // conexion con bbdd
 
-    if(slug){
+    if( slug ){
 
-      getFetch.then(res => {
-        setItems( products.filter( prod => prod.marca.toLowerCase() === slug ) )
-        })
-        .catch( err => console.log(err) )
-        .finally(() => setLoading(false) )
+      query.collection('items').where("marca" , "==", slug ).get().then(res => setItems( res.docs.map( item => ( { id: item.id ,...item.data() } )) ) ).catch( err => console.log(err) ).finally( () => setLoading(false) )
 
     }else{
 
-        getFetch.then(res => {
-          setItems( products )
-          })
-          .catch( err => console.log(err) )
-          .finally(() => setLoading(false) )
+      query.collection('items').get().then(res => setItems( res.docs.map( item => ( { id: item.id ,...item.data() } )) ) ).catch( err => console.log(err) ).finally( () => setLoading(false) )
 
     }
-  }, [slug] )
+
+  }, [slug, items] )
+
 
   
   return (
