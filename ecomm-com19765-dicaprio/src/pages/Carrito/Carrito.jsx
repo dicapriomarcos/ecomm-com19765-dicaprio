@@ -1,18 +1,75 @@
-import React from 'react'
+import {React, useState} from 'react'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../../context/CartContext'
 import './carrito.css'
+import firebase from "firebase";
+import "firebase/firestore"
+import { getFirestore } from '../../services/getFirestore';
 
 export default function Carrito( ) {
 
     const {cart, removeItem, deleteCart} = useCartContext()
 
+    const [orderId, setOrderId] = useState()
+    const [formData, setFormData] = useState({})
+
     const cartTotal = Object.values(cart).reduce((q, {subtotal}) => q + subtotal, 0)
+    
+    const handleChange = e => {
+
+
+        setFormData({
+            ...formData,
+            [e.target.name] : e.target.value
+        })
+
+        
+
+    }
+
+        const checkout = event => {
+
+            event.preventDefault()
+
+            let order = {}
+  
+            order.buyer = 
+                {
+                    'name' : formData.name,
+                    'phone' : formData.phone,
+                    'email' : formData.email
+                }
+            
+            order.items = cart.map( item => {
+
+                    const id = item.id
+                    const title = item.title
+                    const price = item.price
+                    const quantity = item.cantidad
+                    const subtotal = item.subtotal
+        
+                    return {id, price, quantity, subtotal, title}
+            })
+
+            order.total = cartTotal
+
+            order.date = firebase.firestore.Timestamp.fromDate( new Date() )
+
+            const saveOrder = getFirestore()
+
+            saveOrder.collection('orders').add(order)
+            .then(res => { setOrderId(res.id); console.log(res.data.docs) } )
+            .catch(err => console.log(err) )
+        }
+
+
+
 
     return (
         <section id="cart-page">
             <h1>Carrito</h1>
-            { cartTotal > 0 ? 
+            { cartTotal > 0 ?
+                <>
                 <div id="cart-items-wrapper">
                     <div className="item-cart-row header">
                         <div className="title"> Producto </div>
@@ -36,7 +93,28 @@ export default function Carrito( ) {
                     <div>
                         Total: { cartTotal }€
                     </div>                    
-                </div>            
+                </div>
+                
+                <h2>Checkout</h2>
+                <div id="cart-checkout-wrapper">
+                    
+                    <form onSubmit={checkout} id="form-checkout">
+                        <label htmlFor="name">
+                            <input type="text" name="name" placeholder="Nombre*" onChange={handleChange } required/>
+                        </label>
+                        <label htmlFor="phone">
+                            <input type="tel" name="phone" placeholder="Teléfono*" onChange={handleChange } required/>
+                        </label>
+                        <label htmlFor="email">
+                            <input type="email" name="email" placeholder="E-mail*" onChange={handleChange } required/>
+                        </label>
+                        <input type="submit" value="Finalizar Compra" />
+                    </form>
+
+                </div>
+                { orderId && <div>Gracias, tu compra se registro de manera exitosa con el identificador: {orderId}  </div>}
+                
+                </>       
             : <div> <h4>No hay productos en tu carrito</h4> <Link to="/">Ir al catalogo</Link> </div>}  
         </section>
     )
