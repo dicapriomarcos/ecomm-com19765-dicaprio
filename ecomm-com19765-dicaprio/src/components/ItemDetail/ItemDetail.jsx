@@ -6,17 +6,14 @@ import GoToCart from './GoToCart/GoToCart'
 import { useCartContext } from '../../context/CartContext'
 
 
-
-
 export default function ItemDetail({item}) {
 
     const [add, setAdd] = useState(false)
-
     const { cart, setCart } = useCartContext()
 
     const addItem = ( quantity) => {
 
-        const index = cart.findIndex(i => i.id === item.id)
+    const index = cart.findIndex(i => i.id === item.id)
 
         if (index > -1 ) {
             const OldQuantity = cart[index].cantidad
@@ -33,7 +30,6 @@ export default function ItemDetail({item}) {
 
     
     const [quantity, setQuantity] = useState(1)
-
     const addQuantity = () => {
 
         quantity < item.stock ? setQuantity(quantity + 1) : alert('Ya no hay stock')
@@ -43,7 +39,7 @@ export default function ItemDetail({item}) {
     const removeQuantity = () => {
 
         quantity > 0 ? setQuantity(quantity - 1) : alert('No puedes bajar de aquí')
-
+        
     }
 
 

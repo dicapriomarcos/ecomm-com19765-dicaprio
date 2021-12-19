@@ -24,3 +24,11 @@ Las imagenes se utilizaron de pccomponentes.es (Derechos reservados al sitio pcc
 ### Iconos
 
 Los iconos del sitio son de flaticon.es (Derechos reservados a flaticon.es)
+
+### Base de datos
+
+La base de datos fue realizada con Firebase
+
+### DEMO
+
+https://blissful-einstein-bc865a.netlify.app/

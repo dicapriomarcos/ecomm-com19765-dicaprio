@@ -7,23 +7,24 @@ import "firebase/firestore"
 import { getFirestore } from '../../services/getFirestore';
 
 export default function Carrito( ) {
-
+    
     const {cart, removeItem, deleteCart} = useCartContext()
-
     const [orderId, setOrderId] = useState()
     const [formData, setFormData] = useState({})
-
     const cartTotal = Object.values(cart).reduce((q, {subtotal}) => q + subtotal, 0)
-    
-    const handleChange = e => {
 
+    const handleChange = e => {
 
         setFormData({
             ...formData,
             [e.target.name] : e.target.value
         })
 
-        
+    }
+
+    const checkEmail = e => {
+
+        alert('hola')
 
     }
 
@@ -31,39 +32,43 @@ export default function Carrito( ) {
 
             event.preventDefault()
 
-            let order = {}
-  
-            order.buyer = 
-                {
-                    'name' : formData.name,
-                    'phone' : formData.phone,
-                    'email' : formData.email
-                }
+            if( document.getElementById('form-email').value ===  document.getElementById('form-email-confirm').value ){
+    
+                let order = {}
+                order.buyer = 
+                    {
+                        'name' : formData.name,
+                        'phone' : formData.phone,
+                        'email' : formData.email
+                    }
+                order.items = cart.map( item => {
+
+                        const id = item.id
+                        const title = item.title
+                        const price = item.price
+                        const quantity = item.cantidad
+                        const subtotal = item.subtotal
             
-            order.items = cart.map( item => {
+                        return {id, price, quantity, subtotal, title}
+                })
+                order.total = cartTotal
+                order.date = firebase.firestore.Timestamp.fromDate( new Date() )
 
-                    const id = item.id
-                    const title = item.title
-                    const price = item.price
-                    const quantity = item.cantidad
-                    const subtotal = item.subtotal
-        
-                    return {id, price, quantity, subtotal, title}
-            })
+                const saveOrder = getFirestore()
+                saveOrder.collection('orders').add(order)
+                .then(res => {
+                    setOrderId(res.id)
+                    document.getElementById('checkout-wrapper').style.display = 'none'
+                } )
+                .catch(err => console.log(err) )              
 
-            order.total = cartTotal
+            }else{
 
-            order.date = firebase.firestore.Timestamp.fromDate( new Date() )
+                document.getElementById('error-confirm-email').style.display = 'block'
 
-            const saveOrder = getFirestore()
+            }
 
-            saveOrder.collection('orders').add(order)
-            .then(res => { setOrderId(res.id); console.log(res.data.docs) } )
-            .catch(err => console.log(err) )
         }
-
-
-
 
     return (
         <section id="cart-page">
@@ -94,25 +99,34 @@ export default function Carrito( ) {
                         Total: { cartTotal }€
                     </div>                    
                 </div>
-                
-                <h2>Checkout</h2>
-                <div id="cart-checkout-wrapper">
-                    
-                    <form onSubmit={checkout} id="form-checkout">
-                        <label htmlFor="name">
-                            <input type="text" name="name" placeholder="Nombre*" onChange={handleChange } required/>
-                        </label>
-                        <label htmlFor="phone">
-                            <input type="tel" name="phone" placeholder="Teléfono*" onChange={handleChange } required/>
-                        </label>
-                        <label htmlFor="email">
-                            <input type="email" name="email" placeholder="E-mail*" onChange={handleChange } required/>
-                        </label>
-                        <input type="submit" value="Finalizar Compra" />
-                    </form>
-
+      
+                <div id="checkout-wrapper">
+                    <h2>Checkout</h2>
+                    <div id="cart-checkout-wrapper">
+                        
+                        <form onSubmit={checkout} id="form-checkout">
+                            <label htmlFor="name">
+                                <input type="text" name="name" placeholder="Nombre*" onChange={handleChange } required/>
+                            </label>
+                            <label htmlFor="phone">
+                                <input type="tel" name="phone" placeholder="Teléfono*" onChange={handleChange } required/>
+                            </label>
+                            <label htmlFor="email">
+                                <input id="form-email" type="email" name="email" placeholder="E-mail*" onChange={handleChange } required/>
+                            </label>
+                            <label htmlFor="email-confirm">
+                                <input type="email" id="form-email-confirm" name="email-confirm" placeholder="Confirmar E-mail*"  required/>
+                                <div id="error-confirm-email" class="form-error">
+                                    Los correos electronicos no son iguales.
+                                </div>
+                            </label>
+                            
+                            <input type="submit" value="Finalizar Compra" />
+                        </form>
+                    </div>
                 </div>
-                { orderId && <div>Gracias, tu compra se registro de manera exitosa con el identificador: {orderId}  </div>}
+                
+                { orderId && <div class="order-success">Gracias, tu compra se registro de manera exitosa con el identificador: {orderId}  </div>}
                 
                 </>       
             : <div> <h4>No hay productos en tu carrito</h4> <Link to="/">Ir al catalogo</Link> </div>}  

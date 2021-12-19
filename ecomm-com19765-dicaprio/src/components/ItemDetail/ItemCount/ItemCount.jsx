@@ -3,7 +3,6 @@ import './itemcount.css'
 
 export default function ItemCount({ removeQuantity, addQuantity, quantity = 1}) {
 
-
   return (
     <div className="add-to-cart-container">
         <div className="quantity-buttons">

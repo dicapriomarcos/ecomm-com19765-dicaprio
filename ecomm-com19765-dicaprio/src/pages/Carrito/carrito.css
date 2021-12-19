@@ -69,3 +69,21 @@
     margin-bottom: 10px;
     padding: 5px 10px;
 }
+
+.order-success {
+    display: inline-block;
+    background-color: #63db63;
+    color: white;
+    padding: 10px 20px;
+}
+
+.form-error {
+    max-width: 500px;
+    text-align: left;
+    display: none;
+    background-color: red;
+    padding: 5px 10px;
+    color: white;
+    margin: auto;
+    margin-bottom: 15px;
+}
